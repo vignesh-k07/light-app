@@ -1,0 +1,21 @@
+.navbar {
+   background-color: black;
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+.bulbLogo {
+    background-color: white;
+    border-radius: 25px;
+    margin: 5px;
+    width: 50px;
+}
+
+.title {
+    font-family: 'Bebas Neue', cursive;
+    color: #FAEEE7;
+    font-size: 60px;
+    margin: 5px;
+}

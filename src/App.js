@@ -1,23 +1,19 @@
-import logo from './logo.svg';
+
+import { useState } from 'react';
 import './App.css';
+import Header from "./components/Header";
+import Switch from './components/Switch';
 
 function App() {
+  const [value1,setvalue1]=useState('ON')
+  const [value2,setvalue2]=useState('ON')
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <div className='lightContainer'>
+      <Switch isOn={value1} toggle={()=>setvalue1(value1==='ON'?'OFF':'ON')}/>
+      <Switch isOn={value2} toggle={()=>setvalue2(value2==='ON'?'OFF':'ON')}/>
+      </div>
     </div>
   );
 }
